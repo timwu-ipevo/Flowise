@@ -28,6 +28,8 @@ import openaiAssistantsRouter from './openai-assistants'
 import openaiAssistantsFileRouter from './openai-assistants-files'
 import openaiAssistantsVectorStoreRouter from './openai-assistants-vector-store'
 import pingRouter from './ping'
+import execRouter from './exec'
+
 import predictionRouter from './predictions'
 import promptListsRouter from './prompts-lists'
 import publicChatbotRouter from './public-chatbots'
@@ -43,6 +45,7 @@ import versionRouter from './versions'
 const router = express.Router()
 
 router.use('/ping', pingRouter)
+router.use('/exec', execRouter)
 router.use('/apikey', apikeyRouter)
 router.use('/assistants', assistantsRouter)
 router.use('/chatflows', chatflowsRouter)

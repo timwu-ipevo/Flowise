@@ -138,7 +138,8 @@ export class App {
                 '/api/v1/leads',
                 '/api/v1/get-upload-file',
                 '/api/v1/ip',
-                '/api/v1/ping'
+                '/api/v1/ping',
+                '/api/v1/exec'
             ]
             this.app.use((req, res, next) => {
                 if (/\/api\/v1\//i.test(req.url)) {
@@ -173,7 +174,6 @@ export class App {
         this.app.use((req: Request, res: Response) => {
             res.sendFile(uiHtmlPath)
         })
-
         // Error handling
         this.app.use(errorHandlerMiddleware)
     }
